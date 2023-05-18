@@ -3,6 +3,9 @@ import styles from './Footer.module.css'
 export function Footer() {
     return (
         <div className={styles.footer}>
+            <div className={styles.continueLoad}>
+                <button>Continuar</button>
+            </div>
             <footer>
                 <span>© Crunchyroll, LLC</span>
                 <select name="languages" id="languages">

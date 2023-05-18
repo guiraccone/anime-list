@@ -10,6 +10,13 @@
 
 .post img {
     width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.post legend{
+    color: var(--gray-100);
 }
 
 .post legend, span {

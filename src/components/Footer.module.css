@@ -7,6 +7,25 @@
     flex-direction: column;
 }
 
+.continueLoad {
+    place-self: center;
+    margin-top: 2rem;
+}
+
+.continueLoad button {
+    color: white;
+    width: 5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    height: 2rem;
+    background-color: var(--gray-800);
+}
+
+.continueLoad button:hover{
+    background-color: var(--gray-400);
+}
+
 .footer hr {
     width: 100%;
 }

@@ -13,8 +13,8 @@ export function Post(props: PostProps) {
   const imageUrl = anime.images.jpg.image_url;
   const title = anime.title
   const titleJapanese = anime.title_japanese
-  const numOfEpisodes = anime.episodes
-
+  const numOfEpisodes = anime.episodes === null ? 'Airing' : anime.episodes
+ 
   return (
     <>
       <div className={styles.post}>
@@ -23,7 +23,7 @@ export function Post(props: PostProps) {
         </div>
         <span>{title}</span>
         <legend>{titleJapanese}</legend>
-        <legend><i>Episódios <Diamond size={10} /> </i>{numOfEpisodes}</legend>
+        <p><i>Episódios <Diamond size={10} /> </i>{numOfEpisodes}</p>
       </div>
 
     </>
