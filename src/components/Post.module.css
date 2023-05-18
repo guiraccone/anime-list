@@ -1,0 +1,23 @@
+.post {
+    margin-top: 1rem;
+    color: var(--white-500);
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    max-height: 200px;
+
+}
+
+.post img {
+    width: 200px;
+}
+
+.post legend, span {
+    width: 100%;
+    line-height: normal;
+}
+
+.post img:hover {
+    filter: brightness(0.4);
+    cursor: pointer;
+}
