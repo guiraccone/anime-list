@@ -1,30 +1,33 @@
-.post {
+import styled from "styled-components";
+
+export const PostLayout = styled.div`
+
     margin-top: 1rem;
-    color: var(--white-500);
+    color: ${(props) => props.theme["--white-500"]};
     display: flex;
     width: 200px;
     flex-direction: column;
     max-height: 200px;
 
-}
 
-.post img {
+img {
     width: 200px;
     height: 300px;
     object-fit: cover;
     transition: 0.2s;
 }
 
-.post legend{
-    color: var(--gray-100);
+legend{
+    color: ${(props) => props.theme["--gray-100"]};
 }
 
-.post legend, span {
+legend, span {
     width: 100%;
     line-height: normal;
 }
 
-.post img:hover {
+img:hover {
     filter: brightness(0.4);
     cursor: pointer;
 }
+`

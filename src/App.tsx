@@ -1,22 +1,19 @@
-import { Navbar } from "./components/Navbar";
-import { Content } from "./components/Content";
-import { Footer } from "./components/Footer";
+import { ThemeProvider } from "styled-components";
 
-import styles from "./App.module.css"
-import './global.css'
+import { GlobalStyle } from './styles/global'
+import { defaultTheme } from "./styles/themes/default";
+
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
 
 export function App() {
   return (
-    <>
-      <div className={styles.wrapper}>
-        <Navbar />
-        <main>
-          <Content />
-        </main>
-        <Footer />
-      </div>
-    </>
-
+    <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router/>
+        <GlobalStyle/>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

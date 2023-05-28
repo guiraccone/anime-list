@@ -1,6 +1,9 @@
-.navbar {
-    background: var(--gray-800);
-    color: var(--white-500);
+import styled from 'styled-components'
+
+export const HeaderContainer = styled.header`
+nav{
+    background: ${(props) => props.theme['--gray-900']};
+    color: ${(props) => props.theme['--white-500']};
     height: 66px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,43 +11,43 @@
     position: fixed;
     z-index: 100;
 
-}
-
-.navbar button {
+    button {
     background: none;
-    color: var(--white-500);
+    color: ${(props) => props.theme['--white-500']};
     font-size: 1.1rem;
     height: 66px;
     width: 118px;
     border: none;
-    cursor: pointer;
     transition: 0.3s;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.navbar button:hover {
-    background: var(--gray-900);
-}
+    &:hover {
+        background: ${(props) => props.theme['--gray-800']};
+        cursor: pointer;
 
-.navSideLeft {
+        }
+    }
+        
+    .navSideLeft {
     width: 807px;
     display: flex;
     padding: 1rem;
     justify-content: flex-start;
-}
+    }
 
-.navSideRight {
+    .navSideRight {
     width: 549px;
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
+    }
 
-}
-
-.profile {
+    .profile {
     object-fit: cover;
     border-radius: 50%;
-}
+        }
+    }
+`
