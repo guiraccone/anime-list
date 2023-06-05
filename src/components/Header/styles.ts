@@ -4,14 +4,16 @@ export const HeaderContainer = styled.header`
 nav{
     background: ${(props) => props.theme['--gray-900']};
     color: ${(props) => props.theme['--white-500']};
-    height: 66px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;    
     position: fixed;
     z-index: 100;
 
-    button {
+    a, button {
     background: none;
     color: ${(props) => props.theme['--white-500']};
     font-size: 1.1rem;
@@ -19,35 +21,42 @@ nav{
     width: 118px;
     border: none;
     transition: 0.3s;
+    text-decoration: none;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     &:hover {
-        background: ${(props) => props.theme['--gray-800']};
+        color: ${(props) => props.theme['--gray-100']};
         cursor: pointer;
-
         }
     }
-        
-    .navSideLeft {
-    width: 807px;
-    display: flex;
-    padding: 1rem;
-    justify-content: flex-start;
+
+    > button{
+        display: none;
     }
 
-    .navSideRight {
-    width: 549px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style-type: none;
+        } 
+    }
+    .active{
+        color: ${(props) => props.theme['--blue']};
     }
 
-    .profile {
-    object-fit: cover;
-    border-radius: 50%;
-        }
+    }
+
+    @media screen and (max-width: 768px){
+       nav ul{
+        display: none;
+       }
+
+       nav button{
+        display: block;
+       }
     }
 `

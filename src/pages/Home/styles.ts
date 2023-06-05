@@ -2,10 +2,7 @@ import styled from "styled-components";
 
 export const HomeLayout = styled.div`
 
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-
+  
  .content {
     display: flex;
     flex-direction: column;
@@ -45,6 +42,13 @@ export const HomeLayout = styled.div`
 
  button:hover{
     background-color: ${(props) => props.theme["--gray-400"]};
+}
+
+@media screen and (max-width: 768px){
+    section{
+        flex-direction: column;
+        gap: 10rem;
+    }
 }
 
 `

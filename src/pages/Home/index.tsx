@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Post } from "../components/Post";
+import { Post } from "../../components/Post/index.tsx";
 
 import { AnimeClient, JikanResponse, Anime, AnimeSearchParams } from '@tutkli/jikan-ts';
-import { HomeLayout } from "./styles";
+import { HomeLayout } from "./styles.ts";
 
 export function Home() {
 
@@ -49,7 +49,6 @@ export function Home() {
 
     return (
         <HomeLayout>
-            <div className='post'>
                 <header>
                     <h1>Recomendações para Você</h1>
                     <hr />
@@ -70,7 +69,6 @@ export function Home() {
                         <button onClick={handleContinue}>Carregar</button>
                     </section>
                 </div>
-            </div>
         </HomeLayout >
     )
 }

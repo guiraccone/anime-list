@@ -3,7 +3,6 @@ import { FooterContainer } from "./styles"
 export function Footer() {
     return (
         <FooterContainer>
-            <div>
                 <footer>
                     <span>© Crunchyroll, LLC</span>
                     <select name="languages" id="languages">
@@ -12,7 +11,6 @@ export function Footer() {
                         <option value="ja-ja">日本語</option>
                     </select>
                 </footer>
-            </div>
         </FooterContainer>
     )
 }
