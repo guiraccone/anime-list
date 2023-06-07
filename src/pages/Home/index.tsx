@@ -45,14 +45,12 @@ export function Home() {
         setCurrentPage(nextPage);
     };
 
-
-
     return (
         <HomeLayout>
             <header>
                 <p>Recomendações para Você</p>
             </header>
-            <div className='content'>
+            <main>
                 {anime && anime.map(
                     (animeGroup, index) =>
                     (
@@ -64,10 +62,10 @@ export function Home() {
                     )
                 )
                 }
-                <section className='continueLoad'>
-                    <button onClick={handleContinue}>Carregar</button>
-                </section>
-            </div>
+            </main>
+            <section>
+                <button onClick={handleContinue}>Carregar</button>
+            </section>
         </HomeLayout >
     )
 }

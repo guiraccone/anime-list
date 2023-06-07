@@ -2,15 +2,7 @@ import styled from "styled-components";
 
 export const HomeLayout = styled.div`
 
-
- .content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-}
-
     header{
-
         p {
         color: ${(props) => props.theme["--white-500"]};
         font-size: 1.5rem;
@@ -19,53 +11,67 @@ export const HomeLayout = styled.div`
         }
     }
 
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+
+        section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15rem;
+        }
+    }
+
+     > section{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+
+        button{
+            color: white;
+        width: 8rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 1rem;
+        height: 4rem;
+        background-color: ${(props) => props.theme["--gray-800"]};
+
+        &:hover{
+            background-color: ${(props) => props.theme["--gray-400"]}
+        }
+    }
+}
     
 
+@media screen and (min-width: 1680px){
+    main{
+        gap: 1rem
 
-    section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15rem;
+        section{
+            justify-content: space-evenly;
+        }
     }
+}
 
-
-    .continueLoad {
-    place-self: center;
-    margin-top: 2rem;
-    }
-
-    .continueLoad button {
-    color: white;
-    width: 8rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 1rem;
-    height: 4rem;
-    background-color: ${(props) => props.theme["--gray-800"]};
-    }
-
- button:hover{
-    background-color: ${(props) => props.theme["--gray-400"]};
-    }
 
 @media screen and (max-width: 1280px){
-    .content{
+    main{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 1024px){
-    .content{
+    main{
         grid-template-columns: 1fr 1fr 1fr ;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 800px){
-    .content{
+    main{
         grid-template-columns: 1fr 1fr ;
-
         section{
             justify-content: center;
         }
@@ -73,7 +79,7 @@ export const HomeLayout = styled.div`
 }
 
 @media screen and (max-width: 600px){
-    .content{
+    main{
         grid-template-columns: 1fr ;
         section{
             justify-content: center;

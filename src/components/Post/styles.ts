@@ -11,8 +11,8 @@ export const PostLayout = styled.div`
 
 
     .imageAndButtonWrapper{
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
         img {
         width: 200px;
