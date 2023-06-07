@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const HomeLayout = styled.div`
 
     header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         p {
         color: ${(props) => props.theme["--white-500"]};
         font-size: 1.5rem;
@@ -18,18 +21,18 @@ export const HomeLayout = styled.div`
 
         section {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 15rem;
+        justify-content: center;
+        margin-bottom: 1rem;
         }
     }
 
      > section{
         display: flex;
         justify-content: center;
-        margin-top: 4rem;
+        margin-top: 3rem;
 
         button{
-            color: white;
+        color: white;
         width: 8rem;
         border: none;
         cursor: pointer;
@@ -46,7 +49,7 @@ export const HomeLayout = styled.div`
 
 @media screen and (min-width: 1680px){
     main{
-        gap: 1rem
+        gap: 1rem;
 
         section{
             justify-content: space-evenly;
@@ -78,7 +81,7 @@ export const HomeLayout = styled.div`
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
     main{
         grid-template-columns: 1fr ;
         section{

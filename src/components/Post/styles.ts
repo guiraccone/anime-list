@@ -1,30 +1,50 @@
 import styled from "styled-components";
 
 export const PostLayout = styled.div`
-
     margin-top: 1rem;
     color: ${(props) => props.theme["--white-500"]};
     display: flex;
-    width: 200px;
+    width: 10rem;
     flex-direction: column;
-    max-height: 200px;
 
+    .imageWrapper {
+        width: 10rem;
+        height: 15rem; 
+        position: relative;
+    }
 
-    .imageAndButtonWrapper{
-        display: flex;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+
+    article {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);         
+        display: none;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        img {
-        width: 200px;
-        height: 300px;
-        object-fit: cover;
-        transition: 0.2s;
+        span,p, i, legend{
+            text-align: center;
+            font-size: 0.9rem;
+            color: ${(props) => props.theme["--white-500"]};
+        }
+
+        legend{
+            color: ${(props) => props.theme["--white-300"]};
         }
     }
 
-    .buttonWrapper{
+    .buttonWrapper {
         display: flex;
-            button{
+        button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,22 +54,25 @@ export const PostLayout = styled.div`
             color: ${(props) => props.theme["--white-300"]};
             border: none;
             cursor: pointer;
-
-            &:hover{background: ${(props) => props.theme["--gray-400"]}}
+            &:hover {
+                background: ${(props) => props.theme["--gray-400"]};
             }
+        }
     }
 
-    legend{
-    color: ${(props) => props.theme["--gray-100"]};
+    legend {
+        color: ${(props) => props.theme["--gray-100"]};
     }
 
-    legend, span {
-    width: 100%;
-    line-height: normal;
+    legend,
+    span {
+        width: 100%;
+        line-height: normal;
     }
 
-    img:hover {
-    filter: brightness(0.4);
-    cursor: pointer;
-}
-`
+    .imageWrapper:hover article {
+        display: flex;
+        cursor: pointer;
+    }
+    
+`;

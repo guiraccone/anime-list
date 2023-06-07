@@ -96,14 +96,14 @@ nav{
         }
     }
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 640px){
         section{
             display: none;
         }
       
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 640px){
         section{
             display: none;
         }
