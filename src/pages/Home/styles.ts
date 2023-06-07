@@ -2,35 +2,39 @@ import styled from "styled-components";
 
 export const HomeLayout = styled.div`
 
-  
+
  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 15rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
 }
 
- h1 {
-    color: var(--white-500);
-    font-weight: 400;
-    padding: 1rem 0;
-}
+    header{
 
- hr {
-    border-radius: 3px;
-}
+        p {
+        color: ${(props) => props.theme["--white-500"]};
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 3rem;
+        }
+    }
 
- section {
+    
+
+
+    section {
     display: flex;
     justify-content: space-between;
-}
+    margin-bottom: 15rem;
+    }
 
 
-.continueLoad {
+    .continueLoad {
     place-self: center;
     margin-top: 2rem;
-}
+    }
 
-.continueLoad button {
+    .continueLoad button {
     color: white;
     width: 8rem;
     border: none;
@@ -38,16 +42,42 @@ export const HomeLayout = styled.div`
     border-radius: 1rem;
     height: 4rem;
     background-color: ${(props) => props.theme["--gray-800"]};
-}
+    }
 
  button:hover{
     background-color: ${(props) => props.theme["--gray-400"]};
+    }
+
+@media screen and (max-width: 1280px){
+    .content{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width: 768px){
-    section{
-        flex-direction: column;
-        gap: 10rem;
+@media screen and (max-width: 1024px){
+    .content{
+        grid-template-columns: 1fr 1fr 1fr ;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .content{
+        grid-template-columns: 1fr 1fr ;
+
+        section{
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        grid-template-columns: 1fr ;
+        section{
+            justify-content: center;
+        }
     }
 }
 

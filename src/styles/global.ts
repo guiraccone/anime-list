@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     background: var(--black);
+    width: 100%;
 }
 
 body,

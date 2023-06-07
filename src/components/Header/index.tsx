@@ -3,13 +3,21 @@ import { MagnifyingGlass, BookmarkSimple, CaretDown, DotsThree } from "@phosphor
 import { HeaderContainer } from "./styles";
 import { NavLink } from 'react-router-dom';
 
+function opensMenu() {
+    const x: any = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
 
 
 export function Header() {
     return (
         <HeaderContainer>
             <nav>
-            <button><DotsThree size={30}/></button>
+                <button onClick={opensMenu}><DotsThree size={30} /></button>
 
                 <ul>
                     <li><button><MagnifyingGlass size={25} /></button></li>

@@ -12,6 +12,7 @@ nav{
     flex-direction: row;    
     position: fixed;
     z-index: 100;
+    overflow: hidden;
 
     a, button {
     background: none;

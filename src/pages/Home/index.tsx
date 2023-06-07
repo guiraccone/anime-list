@@ -14,7 +14,7 @@ export function Home() {
             const animeClient = new AnimeClient();
             const response: JikanResponse<Anime[]> = await animeClient.getAnimeSearch(page);
             const animeList = response.data;
-            const groupedAnime = chunkArray(animeList, 5);
+            const groupedAnime = chunkArray(animeList, 1);
             setAnime(groupedAnime as Anime[][]);
         } catch (error) {
             console.error(error);
@@ -49,26 +49,25 @@ export function Home() {
 
     return (
         <HomeLayout>
-                <header>
-                    <h1>Recomendações para Você</h1>
-                    <hr />
-                </header>
-                <div className='content'>
-                    {anime && anime.map(
-                        (animeGroup, index) =>
-                        (
-                            <section key={index}>
-                                {animeGroup.map((animeItem) => (
-                                    <Post anime={animeItem} key={animeItem.mal_id} />
-                                ))}
-                            </section>
-                        )
+            <header>
+                <p>Recomendações para Você</p>
+            </header>
+            <div className='content'>
+                {anime && anime.map(
+                    (animeGroup, index) =>
+                    (
+                        <section key={index}>
+                            {animeGroup.map((animeItem) => (
+                                <Post anime={animeItem} key={animeItem.mal_id} />
+                            ))}
+                        </section>
                     )
-                    }
-                    <section className='continueLoad'>
-                        <button onClick={handleContinue}>Carregar</button>
-                    </section>
-                </div>
+                )
+                }
+                <section className='continueLoad'>
+                    <button onClick={handleContinue}>Carregar</button>
+                </section>
+            </div>
         </HomeLayout >
     )
 }
