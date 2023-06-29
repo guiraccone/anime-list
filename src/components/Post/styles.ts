@@ -11,13 +11,13 @@ export const PostLayout = styled.div`
         width: 10rem;
         height: 15rem; 
         position: relative;
-    }
 
-    img {
+        img {
         width: 100%;
         height: 100%;
         object-fit: fill;
         border-radius: 0.4rem 0.4rem 0 0;
+    }
     }
 
     article {
@@ -33,7 +33,7 @@ export const PostLayout = styled.div`
 
         span,p, i, legend{
             text-align: center;
-            font-size: 0.9rem;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
             color: ${(props) => props.theme["--white-500"]};
         }
 
@@ -75,4 +75,20 @@ export const PostLayout = styled.div`
         cursor: pointer;
     }
     
+
+    @media screen and (min-width: 1680px){
+      .imageWrapper{
+        width: 15rem;
+        height: 20rem;
+      }
+    }
+
+    @media screen and (min-width: 1920px) {
+        .imageWrapper{
+        width: 20rem;
+        height: 25rem;
+      }
+        
+    }
+
 `;

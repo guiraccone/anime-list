@@ -49,7 +49,7 @@ export const HomeLayout = styled.div`
 
 @media screen and (min-width: 1680px){
     main{
-        gap: 1rem;
+        gap: 3rem;
 
         section{
             justify-content: space-evenly;

@@ -15,13 +15,11 @@ export function Header() {
             <nav>
                 <button onClick={opensMenu}><DotsThree size={30} /></button>
                 <ul>
-                    <li><button><MagnifyingGlass size={25} /></button></li>
-                    <li><NavLink to="/bookmarked" ><BookmarkSimple size={25} /></NavLink></li>
+                    <li><NavLink to="/search"><MagnifyingGlass size={25} /></NavLink></li>
                     <li><button>Navegar <CaretDown /></button></li>
-                    <li><NavLink to="/favorites">Favoritos</NavLink></li>
                 </ul>
                 <NavLink to="/"><img src={logo} alt="Logo da Crunchyroll." /></NavLink>
-            </nav >
+            </nav > 
             <section>
                 <ul>
                     <li><button>Pesquisar <MagnifyingGlass size={25} /></button></li>
