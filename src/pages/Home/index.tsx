@@ -6,7 +6,7 @@ import {
 } from "@tutkli/jikan-ts";
 import { HomeLayout } from "./styles.ts";
 
-import { Skeleton } from "@mui/material";
+import { ArrowRight, ArrowLeft } from "@phosphor-icons/react";
 
 import { useState, useEffect, useCallback } from "react";
 import { Post } from "../../components/Post/index.tsx";
@@ -44,9 +44,21 @@ export function Home() {
     return chunkedArr;
   };
 
+  if (currentPage === 1) {
+    document.getElementById("backButton")?.classList.add("hidden");
+  } else {
+    document.getElementById("backButton")?.classList.remove("hidden");
+  }
+
   const handleContinue = async () => {
     const nextPage = currentPage + 1;
     setCurrentPage(nextPage);
+  };
+
+  const handleBack = async () => {
+    const lastPage = currentPage - 1;
+    console.log(currentPage);
+    setCurrentPage(lastPage);
   };
 
   return (
@@ -55,21 +67,28 @@ export function Home() {
         <p>Recomendações para Você</p>
       </header>
       <main>
-        {anime ? (
-          anime &&
+        {anime &&
           anime.map((animeGroup, index) => (
             <section key={index}>
               {animeGroup.map((animeItem) => (
                 <Post anime={animeItem} key={animeItem.mal_id} />
               ))}
             </section>
-          ))
-        ) : (
-            <Skeleton variant="rectangular" width={210} height={118} />
-            )}
+          ))}
       </main>
       <section>
-        <button onClick={handleContinue}>Carregar</button>
+        <button
+          id="backButton"
+          onClick={handleBack}
+          disabled={currentPage === 1}
+        >
+          <ArrowLeft />
+          Voltar
+        </button>
+        <button onClick={handleContinue}>
+          Continuar
+          <ArrowRight />
+        </button>
       </section>
     </HomeLayout>
   );

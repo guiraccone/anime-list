@@ -29,9 +29,9 @@ export function Search() {
         searchParams
       );
       const searchResults: Anime[] | null = response.data;
-      
+
       const groupedAnime = groupAnimeByScore(searchResults);
-      
+
       setAnime(groupedAnime);
     } catch (error) {
       console.error("Error searching anime:", error);
@@ -40,7 +40,7 @@ export function Search() {
 
   const groupAnimeByScore = (anime: Anime[] | null): Anime[] | null => {
     if (!anime) return null;
-    
+
     // Sort anime by score in descending order
     const sortedAnime = anime.sort((a, b) => b.score - a.score);
 

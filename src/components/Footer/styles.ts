@@ -7,9 +7,9 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top:  10rem;
+    margin-top:  20rem;
 
-    background: linear-gradient(360deg, rgba(31, 111, 148, 0.59) 0%, rgba(0, 2, 21, 0) 100%);
+    background: linear-gradient(360deg, rgba(1, 12, 54, 0.59) 0%, rgba(0, 2, 21, 0) 100%);
     padding: 1rem 4rem;
 
     span {

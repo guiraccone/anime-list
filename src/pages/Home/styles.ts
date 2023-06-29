@@ -32,17 +32,24 @@ export const HomeLayout = styled.div`
         margin-top: 3rem;
 
         button{
-        color: white;
-        width: 8rem;
+        color: ${(props) => props.theme["--white-500"]};
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        height: 3rem;
         border: none;
         cursor: pointer;
-        border-radius: 1rem;
-        height: 4rem;
         background-color: ${(props) => props.theme["--gray-800"]};
 
         &:hover{
             background-color: ${(props) => props.theme["--gray-400"]}
         }
+    }
+
+    .hidden{
+        display: none;
     }
 }
     

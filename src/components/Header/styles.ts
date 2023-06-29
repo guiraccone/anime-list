@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
 nav{
-    background: ${(props) => props.theme['--gray-900']};
+    background: ${(props) => props.theme['--blue-900']};
     color: ${(props) => props.theme['--white-500']};
     height: 4rem;
     width: 100%;
@@ -13,6 +13,13 @@ nav{
     position: fixed;
     z-index: 100;
     overflow: hidden;
+
+    article{
+            img{
+                width: 10rem;
+                height: 3rem;
+            }
+    }
 
     ul{
         display: flex;

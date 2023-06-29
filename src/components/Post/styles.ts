@@ -33,7 +33,7 @@ export const PostLayout = styled.div`
 
         span,p, i, legend{
             text-align: center;
-            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-size: clamp(0.9rem, 2vw, 0.895rem);
             color: ${(props) => props.theme["--white-500"]};
         }
 
