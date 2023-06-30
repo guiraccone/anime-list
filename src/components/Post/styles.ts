@@ -40,6 +40,19 @@ export const PostLayout = styled.div`
         legend{
             color: ${(props) => props.theme["--white-300"]};
         }
+
+        button{
+            cursor: pointer;
+            background: none;
+            border: 0.1rem solid ${(props) => props.theme["--white-500"]};
+            width: 70%;
+            color: ${(props) => props.theme["--white-500"]};
+            border-radius: 1rem;
+
+            &:hover{
+                background: ${(props) => props.theme["--gray-400"]};
+            }
+        }
     }
 
     .buttonWrapper {

@@ -8,11 +8,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
-body {
-    background: var(--black);
-    width: 100%;
-}
-
 body,
 button, select, option {
     font-family: Jost,  sans-serif;
