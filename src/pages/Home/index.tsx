@@ -10,6 +10,7 @@ import { ArrowRight, ArrowLeft } from "@phosphor-icons/react";
 
 import { useState, useEffect, useCallback } from "react";
 import { Post } from "../../components/Post/index.tsx";
+import { Skeleton } from "../../components/Skeleton/index.tsx";
 
 export function Home() {
   const [anime, setAnime] = useState<Anime[][] | null>(null);
@@ -66,11 +67,17 @@ export function Home() {
   return (
     <HomeLayout>
       {!isLoaded ? (
-        <div>Carregando...</div>
+        <div>
+          {Array(25)
+            .fill(null)
+            .map((_, index) => (
+              <Skeleton key={index} />
+            ))}
+        </div>
       ) : (
         <>
           <header>
-            <p>Recomendações para Você</p>
+            <p>Recommended for you!</p>
           </header>
           <main>
             {anime &&

@@ -31,11 +31,11 @@ export function Post(props: PostProps) {
             <span>{typeAnime}</span>
             <p>
               <i>
-                Episódios <Diamond size={10} weight="fill" />
+                Episodes <Diamond size={10} weight="fill" />
               </i>
               {numOfEpisodes}
             </p>
-            <button onClick={() => setOpen(!open)}>Visualizar</button>
+            <button onClick={() => setOpen(!open)}>View More</button>
           </article>
           <img src={imageUrl} alt={title} />
         </div>

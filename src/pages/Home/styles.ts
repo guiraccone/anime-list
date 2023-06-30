@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const HomeLayout = styled.div`
 
+    
+
     header{
         display: flex;
         justify-content: center;
@@ -12,6 +14,12 @@ export const HomeLayout = styled.div`
         font-weight: 400;
         line-height: 3rem;
         }
+    }
+
+    > div{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3rem;
     }
 
     main {
