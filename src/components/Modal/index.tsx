@@ -38,7 +38,6 @@ export function Modal({
               </span>
             ))}
           </legend>
-
           <img src={imageUrl} />
         </div>
         <section>

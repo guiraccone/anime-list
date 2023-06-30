@@ -63,7 +63,7 @@ export const HomeLayout = styled.div`
     
 
 @media screen and (min-width: 1680px){
-    main{
+    > div, main{
         gap: 3rem;
 
         section{
@@ -74,21 +74,21 @@ export const HomeLayout = styled.div`
 
 
 @media screen and (max-width: 1280px){
-    main{
+    > div, main{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 1024px){
-    main{
+    > div, main{
         grid-template-columns: 1fr 1fr 1fr ;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 800px){
-    main{
+    > div, main{
         grid-template-columns: 1fr 1fr ;
         section{
             justify-content: center;
@@ -97,10 +97,11 @@ export const HomeLayout = styled.div`
 }
 
 @media screen and (max-width: 640px){
-    main{
+    > div, main{
         grid-template-columns: 1fr ;
         section{
             justify-content: center;
+           
         }
     }
 }

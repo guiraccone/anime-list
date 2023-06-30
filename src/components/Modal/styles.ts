@@ -13,7 +13,6 @@ export const ModalLayout = styled.div`
 
 
     display: flex;
-    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 
@@ -27,7 +26,7 @@ export const ModalLayout = styled.div`
         }
         button{
             width: 30%;
-            background: none;
+            background: ${(props) => props.theme["--blue"]};
             color: ${(props) => props.theme["--white-500"]};
             border: 0.1rem solid ${(props) => props.theme["--white-300"]};
             cursor: pointer;
@@ -41,8 +40,33 @@ export const ModalLayout = styled.div`
     }
     section{
         gap: 1rem;
-
     }
+
+    @media screen and (max-width: 640px){
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+       section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+        span{
+                display: flex;
+                justify-content: center;
+            }
+       }
+       div{
+        img{
+            width: 10rem;
+            object-fit: contain;
+        }
+       }
+    }
+    
+
     
 
 `
