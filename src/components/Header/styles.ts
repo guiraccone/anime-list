@@ -17,10 +17,11 @@ nav{
     ul{
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
         li{
             list-style-type: none;
             img{
-                width: 10rem;
+                width: 8rem;
                 height: 3rem;
             }
         } 
@@ -30,8 +31,8 @@ nav{
     background: none;
     color: ${(props) => props.theme['--white-500']};
     font-size: 1.1rem;
-    height: 66px;
-    width: 118px;
+    height: 100%;
+    width: 90%;
     border: none;
     transition: 0.3s;
     text-decoration: none;

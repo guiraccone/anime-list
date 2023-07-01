@@ -1,10 +1,21 @@
 import styled from "styled-components";
 
-export const SearchContainer = styled.form`
+export const PageContainer = styled.div`
 
+h1{
+    margin-top: 1rem;
+}
+
+main{
+    > div{
+        margin-top: 100%;
+    }
+}
+
+form{
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 3rem;
 
     input{
         width: 100%;
@@ -15,12 +26,10 @@ export const SearchContainer = styled.form`
         border: none;
         font-family: 'Jost';
         font-weight: 500;
-
         &:focus{
             border: none;
         }
     }
-
     button{
         display: flex;
         justify-content: center;
@@ -40,9 +49,37 @@ export const SearchContainer = styled.form`
         }
 
     }
-`
+}
 
+
+
+`
 export const AnimeContainer = styled.section`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media screen and (min-width: 1600px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+    
 `

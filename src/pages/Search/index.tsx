@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { AnimeContainer, SearchContainer } from "./styles";
+import { AnimeContainer, PageContainer } from "./styles";
 import {
   AnimeClient,
   JikanResponse,
@@ -48,19 +48,27 @@ export function Search() {
   };
 
   return (
-    <>
-      <SearchContainer onSubmit={handleSearch}>
+    <PageContainer>
+      <h1>Search here for some anime</h1>
+      <form onSubmit={handleSearch}>
         <input type="text" name="searchBar" id="searchBar" />
         <button type="submit">
           <MagnifyingGlass />
-          <span>Pesquisar</span>
+          <span>Search...</span>
         </button>
-      </SearchContainer>
+      </form>
 
-      <AnimeContainer>
-        {anime &&
-          anime.map((anime) => <Post key={anime.mal_id} anime={anime} />)}
-      </AnimeContainer>
-    </>
+      <main>
+        {anime && anime.length > 0 ? (
+          <AnimeContainer>
+            {anime.map((anime) => (
+              <Post key={anime.mal_id} anime={anime} />
+            ))}
+          </AnimeContainer>
+        ) : (
+          <div></div>
+        )}
+      </main>
+    </PageContainer>
   );
 }

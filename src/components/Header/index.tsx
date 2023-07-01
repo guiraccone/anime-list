@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
+import { MagnifyingGlass, House } from "@phosphor-icons/react";
 import { HeaderContainer } from "./styles";
 import { NavLink } from "react-router-dom";
 
@@ -8,8 +8,11 @@ export function Header() {
       <nav>
         <ul>
           <li>
+            <img src="./src/assets/logo.png" alt="Logo da AnyMedia." />
+          </li>
+          <li>
             <NavLink to="/">
-              <img src="./src/assets/logo.png" alt="Logo da AnyMedia." />
+              <House size={25} />
             </NavLink>
           </li>
           <li>
