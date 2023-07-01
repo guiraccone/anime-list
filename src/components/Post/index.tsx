@@ -19,6 +19,8 @@ export function Post(props: PostProps) {
   const genre = anime.genres;
   const synopsis = anime.synopsis;
   const status = anime.status;
+  const rating = anime.rating
+  const avaliation = anime.score
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -50,6 +52,8 @@ export function Post(props: PostProps) {
         synopsis={synopsis}
         type={typeAnime}
         status={status}
+        rating={rating}
+        avaliation={avaliation}
       />
     </>
   );

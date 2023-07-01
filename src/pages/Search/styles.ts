@@ -35,7 +35,7 @@ form{
         justify-content: center;
         align-items: center;
         border-radius: 0 1rem 1rem 0 ;
-        width: 7rem;
+        width: 40%;
         height: 3rem;
         background: ${(props) => props.theme["--gray-900"]};
         border: none;
@@ -64,6 +64,7 @@ export const AnimeContainer = styled.section`
 
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   @media screen and (min-width: 800px) {

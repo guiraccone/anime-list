@@ -11,6 +11,8 @@ interface IModal {
   titleJapanese: string;
   type: string;
   status: string;
+  rating: string;
+  avaliation: number;
 }
 
 export function Modal({
@@ -23,6 +25,8 @@ export function Modal({
   titleJapanese,
   type,
   status,
+  rating,
+  avaliation,
 }: IModal) {
   if (isOpen) {
     return (
@@ -43,6 +47,8 @@ export function Modal({
         <section>
           <span>Status: {status}</span>
           <span>Type: {type}</span>
+          <span>Rating: {rating}</span>
+          <span>Avaliation: {avaliation}/10</span>
           <span>Sinopsys</span>
           <p>{synopsis}</p>
           <button onClick={() => setOpen(false)}>Close</button>

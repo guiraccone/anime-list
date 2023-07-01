@@ -97,10 +97,10 @@ export function Home() {
               disabled={currentPage === 1}
             >
               <ArrowLeft />
-              Voltar
+              Back
             </button>
             <button onClick={handleContinue}>
-              Próximo
+              Next
               <ArrowRight />
             </button>
           </section>

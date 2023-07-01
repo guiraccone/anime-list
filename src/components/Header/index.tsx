@@ -8,7 +8,10 @@ export function Header() {
       <nav>
         <ul>
           <li>
-            <img src="./src/assets/logo.png" alt="Logo da AnyMedia." />
+            <img
+              src="./src/assets/logo.png"
+              alt="AnyMedia Logo, with iconic elements of One Piece, Dragon Ball and JoJo's Bizarre Adventure"
+            />
           </li>
           <li>
             <NavLink to="/">
