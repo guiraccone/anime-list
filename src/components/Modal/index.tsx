@@ -13,6 +13,8 @@ interface IModal {
   status: string;
   rating: string;
   avaliation: number;
+  duration: string;
+
 }
 
 export function Modal({
@@ -27,6 +29,7 @@ export function Modal({
   status,
   rating,
   avaliation,
+  duration
 }: IModal) {
   if (isOpen) {
     return (
@@ -46,6 +49,7 @@ export function Modal({
         </div>
         <section>
           <span>Status: {status}</span>
+          <span>Duration: {duration}</span>
           <span>Type: {type}</span>
           <span>Rating: {rating}</span>
           <span>Avaliation: {avaliation}/10</span>

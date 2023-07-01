@@ -10,6 +10,7 @@ export const ModalLayout = styled.div`
     padding: 3rem;
     background: rgba(0,0,0 ,0.8);
     overflow-y: auto;
+    transition: 1ms;
 
 
     display: flex;
@@ -26,8 +27,9 @@ export const ModalLayout = styled.div`
         }
         button{
             width: 30%;
-            background: ${(props) => props.theme["--blue"]};
+            background: none;
             color: ${(props) => props.theme["--white-500"]};
+            place-self: center;
             border: 0.1rem solid ${(props) => props.theme["--white-300"]};
             cursor: pointer;
             transition: 0.2s;

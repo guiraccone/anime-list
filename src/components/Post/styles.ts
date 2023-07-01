@@ -51,7 +51,7 @@ export const PostLayout = styled.div`
             font-weight: 500;
 
             &:hover{
-                background: ${(props) => props.theme["--gray-400"]};
+                background: ${(props) => props.theme["--blue-900"]};
             }
         }
     }
