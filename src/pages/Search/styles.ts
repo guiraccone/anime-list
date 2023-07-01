@@ -9,6 +9,7 @@ h1{
 main{
     > div{
         margin-top: 100%;
+        height: 29rem;
     }
 }
 
@@ -51,6 +52,18 @@ form{
     }
 }
 
+@media screen and (max-width: 600px) {
+    form{
+        input{
+            width: 10rem;
+        }
+        button{
+            width: 4rem;
+        }
+    }
+
+  }
+
 
 
 `
@@ -65,6 +78,7 @@ export const AnimeContainer = styled.section`
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     justify-items: center;
+    
   }
 
   @media screen and (min-width: 800px) {

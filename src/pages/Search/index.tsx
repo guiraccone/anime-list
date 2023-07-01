@@ -51,10 +51,10 @@ export function Search() {
     <PageContainer>
       <h1>Search here for some anime</h1>
       <form onSubmit={handleSearch}>
-        <input type="text" name="searchBar" id="searchBar" />
+        <input type="text" name="searchBar" id="searchBar" placeholder="eg. One Piece"  />
         <button type="submit">
           <MagnifyingGlass />
-          <span>Search...</span>
+          <span>Search</span>
         </button>
       </form>
 
