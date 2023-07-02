@@ -14,7 +14,7 @@ export function Header() {
           </li>
           <li>
             <img
-              src="/src/assets/logo.png"
+              src="./01-projeto-react/src/assets/logo.png"
               alt="AnyMedia Logo, with iconic elements of One Piece, Dragon Ball and JoJo's Bizarre Adventure"
             />
           </li>
