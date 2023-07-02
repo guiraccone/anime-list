@@ -77,7 +77,15 @@ export function Home() {
       ) : (
         <>
           <header>
-            <p>Recommended for you!</p>
+            <p>
+              AnyMedia is a website where you can find any anime that is on the
+              MyAnimeList database. It was made using the Jikan API that parses
+              the website to the needs for an API. Feel free to search for an
+              anime on the search page or go through the pages to find an anime
+              that interests you the most!
+            </p>
+
+            <h1>Recommended for you!</h1>
           </header>
           <main>
             {anime &&

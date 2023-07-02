@@ -6,13 +6,17 @@ export const HomeLayout = styled.div`
 
     header{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        p {
+        h1 {
         color: ${(props) => props.theme["--white-500"]};
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 3rem;
+        }
+        p{
+            text-align: center;
         }
     }
 
@@ -26,6 +30,8 @@ export const HomeLayout = styled.div`
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
+        border-top: 0.2rem solid ${(props) => props.theme["--gray-400"]};
+        border-radius: 0.2rem;
 
         section {
         display: flex;
@@ -88,8 +94,14 @@ export const HomeLayout = styled.div`
 }
 
 @media screen and (max-width: 800px){
+    header{
+        margin-top: 4rem;
+    }
+    
     > div, main{
         grid-template-columns: 1fr 1fr ;
+
+        
         section{
             justify-content: center;
         }
@@ -99,10 +111,15 @@ export const HomeLayout = styled.div`
 @media screen and (max-width: 640px){
     > div, main{
         grid-template-columns: 1fr ;
+        width: 100%;
         section{
             justify-content: center;
            
         }
+    }
+
+    header{
+        margin-top: 4rem;
     }
 }
 
