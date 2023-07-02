@@ -21,6 +21,7 @@ export function Post(props: PostProps) {
   const status = anime.status;
   const rating = anime.rating
   const avaliation = anime.score
+  const avaliatedBy = anime.scored_by
   const duration = anime.duration
 
   const [open, setOpen] = useState<boolean>(false);
@@ -56,6 +57,7 @@ export function Post(props: PostProps) {
         rating={rating}
         avaliation={avaliation}
         duration={duration}
+        avaliatedBy={avaliatedBy}
       />
     </>
   );

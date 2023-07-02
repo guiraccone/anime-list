@@ -13,6 +13,7 @@ interface IModal {
   status: string;
   rating: string;
   avaliation: number;
+  avaliatedBy: number;
   duration: string;
 
 }
@@ -29,7 +30,9 @@ export function Modal({
   status,
   rating,
   avaliation,
-  duration
+  duration,
+  avaliatedBy,
+
 }: IModal) {
   if (isOpen) {
     return (
@@ -52,7 +55,7 @@ export function Modal({
           <span>Duration: {duration}</span>
           <span>Type: {type}</span>
           <span>Rating: {rating}</span>
-          <span>Avaliation: {avaliation}/10</span>
+          <span>Avaliation: {avaliation}/10 ({avaliatedBy} avaliations)</span>
           <span>Sinopsys</span>
           <p>{synopsis}</p>
           <button onClick={() => setOpen(false)}>Close</button>
