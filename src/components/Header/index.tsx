@@ -14,8 +14,8 @@ export function Header() {
           </li>
           <li>
             <img
-              src="https://i.ibb.co/L8ft1H1/logo.png"
               alt="AnyMedia Logo, with iconic elements of One Piece, Dragon Ball and JoJo's Bizarre Adventure"
+              src="https://i.ibb.co/JKP7HgH/logo.png"
             />
           </li>
           <li>
