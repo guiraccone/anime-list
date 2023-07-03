@@ -3,7 +3,7 @@ import { FooterContainer } from "./styles";
 export function Footer() {
   return (
     <FooterContainer>
-      <span>© Guilherme Raccone</span>
+      <span>© Anymedia - 2023</span>
     </FooterContainer>
   );
 }
