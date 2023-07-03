@@ -47,7 +47,7 @@ export function Home() {
     return chunkedArr;
   };
 
-  if (currentPage === 2) {
+  if (currentPage === 0) {
     document.getElementById("backButton")?.classList.add("hidden");
   } else {
     document.getElementById("backButton")?.classList.remove("hidden");
