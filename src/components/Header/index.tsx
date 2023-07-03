@@ -1,8 +1,6 @@
 import { MagnifyingGlass, House } from "@phosphor-icons/react";
 import { HeaderContainer } from "./styles";
 import { NavLink } from "react-router-dom";
-const currentURL = window.location.href;
-
 
 export function Header() {
   return (
@@ -16,7 +14,7 @@ export function Header() {
           </li>
           <li>
             <img
-              src={`${currentURL}/src/assets/logo.png`}
+              src={`./logo.png`}
               alt="AnyMedia Logo, with iconic elements of One Piece, Dragon Ball and JoJo's Bizarre Adventure"
             />
           </li>
