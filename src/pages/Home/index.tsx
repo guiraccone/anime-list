@@ -16,6 +16,7 @@ export function Home() {
   const [anime, setAnime] = useState<Anime[][] | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isBackButtonHidden, setIsBackButtonHidden] = useState(false);
 
   const fetchAnime = useCallback(async (page: Partial<AnimeSearchParams>) => {
     try {
@@ -35,6 +36,8 @@ export function Home() {
   useEffect(() => {
     const searchParams: Partial<AnimeSearchParams> = { page: currentPage };
     fetchAnime(searchParams);
+
+    setIsBackButtonHidden(currentPage < 2);
   }, [currentPage, fetchAnime]);
 
   const chunkArray = (array: unknown[], size: number) => {
@@ -47,18 +50,12 @@ export function Home() {
     return chunkedArr;
   };
 
-  if (currentPage < 2) {
-    document.getElementById("backButton")?.classList.add("hidden");
-  } else {
-    document.getElementById("backButton")?.classList.remove("hidden");
-  }
-
-  const handleContinue = async () => {
+  const handleContinue = () => {
     const nextPage = currentPage + 1;
     setCurrentPage(nextPage);
   };
 
-  const handleBack = async () => {
+  const handleBack = () => {
     const lastPage = currentPage - 1;
     console.log(currentPage);
     setCurrentPage(lastPage);
@@ -103,6 +100,7 @@ export function Home() {
               id="backButton"
               onClick={handleBack}
               disabled={currentPage === 1}
+              className={isBackButtonHidden ? "hidden" : ""}
             >
               <ArrowLeft />
               Back
